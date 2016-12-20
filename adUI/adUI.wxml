@@ -1,0 +1,25 @@
+<template name="adUI">
+
+  <!--toast component template-->
+  <view class="adUI-mask" hidden="{{ !adUI.toast.isShow }}">
+    <view class="adUI-toast">
+      <view class="{{ ('adUI-toast-ico ' + adUI.toast.ico) }}" animation="{{ adUI.toast.loading.animation }}"></view>
+      <view class="adUI-toast-text">{{ adUI.toast.text }}</view>
+    </view>
+  </view>
+
+  <!--modal component template-->
+  <view class="adUI-mask" hidden="{{ !adUI.modal.isShow }}">
+    <view class="adUI-modal">
+      <view class="adUI-modal-title">{{ adUI.modal.title }}</view>
+      <view class="adUI-modal-content">{{ adUI.modal.content }}</view>
+      <view class="adUI-modal-confirm-button" hidden="{{ (adUI.modal.isAlert) }}">
+        <button class="adUI-modal-confirm-button-confirm" hover-class="adUI-modal-confirm-button-confirm-hover" bindtap="adUIModalConfirmCallback">{{ adUI.modal.confirmText }}</button>
+        <button class="adUI-modal-confirm-button-cancel" hover-class="adUI-modal-confirm-button-cancel-hover" bindtap="adUIModalCancelCallback">{{ adUI.modal.cancelText }}</button>
+      </view>
+      <view class="adUI-modal-alert-button" hidden="{{ (!adUI.modal.isAlert) }}">
+        <button class="adUI-modal-alert-button-confirm" hover-class="adUI-modal-alert-button-confirm-hover" bindtap="adUIModalConfirmCallback">{{ adUI.modal.confirmText }}</button>
+      </view>
+    </view>
+  </view>
+</template>

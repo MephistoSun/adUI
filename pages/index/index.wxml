@@ -1,0 +1,8 @@
+<button class="button" bindtap="alertMessage">alert</button>
+<button class="button" bindtap="confirmMessage">confirm</button>
+<button class="button" bindtap="toastLoad">toast load</button>
+<button class="button" bindtap="toastSuccess">toast success</button>
+<button class="button" bindtap="toastDanger">toast danger</button>
+<button class="button" bindtap="toastInfo">toast info</button>
+<import src="../../adUI/adUI.wxml" />
+<template is="adUI" data="{{ adUI }}" />
