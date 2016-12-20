@@ -14,7 +14,7 @@ App({
   }
 })
 ```
-###2.at app.wxss bottom import adUi style
+###2.at app.wxss bottom import adUI style
 ```css
 @import './adUI/adUI.wxss'
 ```
